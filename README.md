@@ -18,29 +18,6 @@
 
 ---
 
-## Архiтектура проєкту
-
-project/
-├── public/                 # HTML-інтерфейс (форма)
-│   └── index.html
-├── src/
-│   ├── app.js             # Ініціалізація Express
-│   ├── server.js          # Запуск сервісу
-│   ├── routes/            # Маршрути API
-│   ├── controllers/       # Обробка запитів
-│   ├── services/          # Email, погода, підтвердження
-│   ├── models/            # Sequelize моделі
-│   ├── jobs/              # Cron-задачі
-│   └── utils/             # Генерація токенів, шаблони email
-├── tests/                 # Тестування (Jest + Supertest)
-├── Dockerfile             # Інструкція для продакшн-контейнера
-├── docker-compose.yml     # Локальний запуск сервісу + БД
-├── .gitignore             # Ігнорування секретних/зайвих файлів
-├── .env.example           # Приклад .env без секретів
-└── README.md              # Цей файл
-
----
-
 ## Технології та бібліотеки
 
 * **Node.js / Express** — бекенд фреймворк
