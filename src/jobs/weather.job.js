@@ -4,7 +4,7 @@ const { getWeatherByCity} = require('../services/weather.service');
 const { sendWeatherEmail } = require('../utils/email');
 
 // Щогодини (щохвилини тест)
-cron.schedule('0 * * * *', async () => {
+cron.schedule('* * * * *', async () => {
     console.log('Hourly weather job...');
     await processWeatherEmails('hourly');
 });
