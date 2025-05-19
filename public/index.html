@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <title>Підписка на погоду</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: #333;
+    }
+
+    .container {
+      background: white;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      max-width: 360px;
+      width: 100%;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 24px;
+      font-weight: 600;
+      color: #222;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    input[type="email"],
+    input[type="text"],
+    select {
+      padding: 12px 16px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: border-color 0.3s ease;
+    }
+
+    input[type="email"]:focus,
+    input[type="text"]:focus,
+    select:focus {
+      border-color: #4a90e2;
+      outline: none;
+    }
+
+    button {
+      padding: 14px 0;
+      background-color: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #357ABD;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Підписка на оновлення погоди</h2>
+    <form method="POST" action="/api/subscribe">
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="text" name="city" placeholder="Місто" required />
+      <select name="frequency" required>
+        <option value="hourly">Щогодини</option>
+        <option value="daily">Щодня</option>
+      </select>
+      <button type="submit">Підписатись</button>
+    </form>
+  </div>
+</body>
+</html>
